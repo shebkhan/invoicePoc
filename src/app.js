@@ -17,6 +17,10 @@ app.use(express.json());
 // Routes
 app.use('/api/invoices', invoiceRoutes);
 
+app.use('/', (req, res) => {
+    res.send('Hello, World!');
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
