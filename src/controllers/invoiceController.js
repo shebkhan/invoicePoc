@@ -13,7 +13,7 @@ class InvoiceController {
     async getSingleInvoice(req, res) {
         try {
 
-            console.log(req.params.invoiceNumber);
+            console.log(req.query.invoiceNumber);
 
             const invoices = await invoiceModel.find({
                 invoiceNumber: req.query.invoiceNumber
